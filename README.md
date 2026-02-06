@@ -1,4 +1,3 @@
-# Assignment 3 – Introduction to Computer Vision
 ## Recreating a publicated lane detection algorithm using classical computer vision methods (ie. no ML).
 Evangelos Ananiadis, Nikoleta Tsavlidou
 Supervising Prof: Dr. Papadimitriou Katerina  
@@ -12,8 +11,8 @@ pip install requirements.txt # install required packages
 
 ### lane detection on a video:
 python process_video.py # process an input video (by default the video should be in the test_videos directory and named test_video.py
-![video_results][resources/]
+![video_results][resources/lane_detected_video.mp4]
 
 ### lane detection on an image:
 jupyter notebook # -> and select 
-![image_results][resources/]
+![image_results][resources/lane_detected.png]
