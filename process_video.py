@@ -23,14 +23,14 @@ D = np.loadtxt('resources/dist.csv', delimiter=',')
 
 # Processing parameters
 top_ratio = 0.55
-bottom_ratio = 0.7
+bottom_ratio = 0.75
 
 # Bird's-eye-view parameters
 src_perc = np.float32([
-    (0.15, 0.9),   # bottom-left
-    (0.9, 0.9),    # bottom-right
-    (0.72, 0.10),  # top-right
-    (0.6, 0.10)])  # top-left
+    (0.15, 0.95),   # bottom-left
+    (0.9, 0.95),    # bottom-right
+    (0.57, 0.1),  # top-right
+    (0.48, 0.1)])  # top-left
 dst_perc = np.float32([
     (0.20, 0.80),   # bottom-left
     (0.80, 0.80),   # bottom-right
@@ -73,9 +73,9 @@ def process_frame(frame):
         # Sliding window detection
         left_fit, right_fit, debug_img = sliding_window_lane_detection(
             birds_eye_image,
-            nwindows=13,
-            margin=70,
-            minpix=70
+            nwindows=20,
+            margin=50,
+            minpix=50
         )
         
         # Check if lane was detected
@@ -181,7 +181,7 @@ def process_video(input_path, output_path=None, display=True):
 
 if __name__ == "__main__":
     # Process video
-    input_video = "test_videos/busy.mp4"
-    output_video = "output_lane_detection2.mp4"
+    input_video = "test_videos/3.mp4"
+    output_video = "output_lane_detection.mp4"
     
     process_video(input_video, output_path=output_video, display=False)
