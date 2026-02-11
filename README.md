@@ -10,9 +10,9 @@ conda create -n lane_detection_env python=3.10 # create a python 3.10 conda envi
 pip install requirements.txt # install required packages
 
 ### lane detection on a video:
-python process_video.py # process an input video (by default the video should be in the test_videos directory and named test_video.py
+python process_video.py # process an input video (by default the video should be in the test_videos directory and named test_video.py  
 ![video_results][resources/lane_detected_video.mp4]
 
 ### lane detection on an image:
-jupyter notebook # -> and select 
+jupyter notebook # -> and select   
 ![image_results][resources/lane_detected.png]
